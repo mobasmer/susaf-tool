@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+
+{% block layout %}
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav ml-auto">
+                    {% if not app.user %}
+                        <li>
+                            <a class="btn btn-primary mr-2" href="{{ path('app_register') }}">
+                                <i class="fas fa-user-plus fa-sm fa-fw mr-2"></i>
+                                Sign up
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-primary" href="{{ path('app_login') }}">
+                                <i class="fas fa-sign-in-alt fa-sm fa-fw mr-2"></i>
+                                Login
+                            </a>
+                        </li>
+                    {% elseif app.user %}
+                        <li>
+                            <a class="btn btn-primary" href="{{ path('app_dashboard') }}">
+                                <i class="fas fa-tachometer-alt fa-sm fa-fw mr-2"></i>
+                                Go to dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#logoutModal2">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2"></i>
+                                Logout
+                            </a>
+                        </li>
+                    {% endif %}
+
+                </ul>
+
+            </nav>
+            <!-- End of Topbar -->
+
+            {% block content %}
+            {% endblock %}
+        </div>
+
+{% endblock %}
+

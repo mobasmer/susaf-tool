@@ -1,0 +1,66 @@
+<div class="modal fade" id="editEffectModal" tabindex="-1" role="dialog" aria-labelledby="editEffectModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editEffectModalLabel">Edit effect</h5>
+                <button type="button" class="close cancel-edit-effect" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id = "edit_alert_placeholder"></div>
+                <form id="edit-effect-form" action="{{ path('app_effects_update_effect') }}">
+                    <div class="form-group">
+                        <label for="effect-label" class="col-form-label">Effect:</label>
+                        <input type="text" class="form-control" required="required" maxlength="50" id="effect-label-modal" name="description">
+                    </div>
+                    <div class="form-group">
+                            <select required="required" class="custom-select" name="dimension" id="dimension-effect-modal">
+                                <option selected value="soc">Social</option>
+                                <option value="ind">Individual</option>
+                                <option value="env">Environmental</option>
+                                <option value="tec">Technical</option>
+                                <option value="eco">Economic</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                            <select required="required" class="custom-select" name="order_of_effect" id="order-effect-modal">
+                                <option selected value="1">Direct</option>
+                                <option value="2">Indirect</option>
+                                <option value="3">Systemic</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                            <div class="form-check form-check-inline" >
+                                <input required="required" type="radio" class="form-check-input" id="effect-positive-modal" name="is_positive" value="1">
+                                <label for="positive" class="form-check-label">Positive</label><br>
+                            </div>
+                            <div class="form-check form-check-inline" >
+                                <input required="required" type="radio" class="form-check-input" id="effect-negative-modal" name="is_positive" value="0">
+                                <label for="negative" class="form-check-label">Negative</label><br>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="note" class="col-form-label">Description</label>
+                        <textarea class="form-control" name="note" id="effect-description-modal"></textarea>
+                    </div>
+                    <div class="form-row m-1" id="div-select-causes">
+                        <label class="col-form-label" for="causes">Caused by</label>
+                        <select id="edit-effect-causes" name="causes" class="select-relations custom-select" multiple>
+                        </select>
+                    </div>
+                    <div class="form-row m-1" id="div-select-consequences">
+                        <label for="consequences" >Leads to</label>
+                        <select id="edit-effect-consequences" name="consequences" class="select-relations custom-select" multiple>
+                        </select>
+                    </div>
+                    <input type="hidden" name="token" value="{{ csrf_token('edit-effect') }}"/>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="cancel-edit-effect btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="save-edit">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

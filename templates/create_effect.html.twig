@@ -1,0 +1,63 @@
+<div class="collapse" id="collapseAddEffect">
+    <div class="card card-body">
+        <div id = "create_alert_placeholder"></div>
+        <form id="form-add-effect" onsubmit="return false" action="{{ path('app_effects_create_effect') }}">
+            <div class="form-row m-1">
+                <input type="text" required="required" maxlength="50" class="form-control m-1" id="effect-label" rows="1"
+                       placeholder="Label of the effect (max. length: 50)" name="description">
+            </div>
+            <div class="form-row m-1">
+                <div class="col">
+                    <select required="required" class="custom-select" name="dimension">
+                        <option selected value="soc">Social</option>
+                        <option value="ind">Individual</option>
+                        <option value="env">Environmental</option>
+                        <option value="tec">Technical</option>
+                        <option value="eco">Economic</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <select required="required" class="custom-select" name="order_of_effect">
+                        <option selected value="1">Direct</option>
+                        <option value="2">Indirect</option>
+                        <option value="3">Systemic</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <div class="form-check form-check-inline">
+                        <input required="required" type="radio" class="form-check-input" id="positive"
+                               name="is_positive" value="1">
+                        <label for="positive" class="form-check-label">Positive</label><br>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input required="required" type="radio" class="form-check-input" id="negative"
+                               name="is_positive" value="0">
+                        <label for="negative" class="form-check-label">Negative</label><br>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row m-1">
+                <textarea class="form-control m-1" id="effect-description" rows="1"
+                          placeholder="Description of the effect" name="note"></textarea>
+            </div>
+            <div class="form-row m-1" id="div-select-causes">
+                <label class="col-form-label" for="causes[]">Caused by</label>
+                <select id="add-effect-causes" name="causes[]" class="select-relations custom-select" multiple>
+                </select>
+            </div>
+            <div class="form-row m-1" id="div-select-consequences">
+                <label for="consequences[]">Leads to</label>
+                <select id="add-effect-consequences" name="consequences[]" class="select-relations custom-select"
+                        multiple>
+                </select>
+            </div>
+            <div class="form-row m-1">
+                <input type="submit" class="btn btn-success" id="submit-new-effect" value="Submit">
+                <button class="btn btn-light" type="button" id="cancel-add-effect" data-toggle="collapse"
+                        data-target="#collapseAddEffect" aria-expanded="false" aria-controls="collapseAddEffect">Cancel
+                </button>
+            </div>
+            <input type="hidden" name="token" value="{{ csrf_token('create-effect') }}"/>
+        </form>
+    </div>
+</div>

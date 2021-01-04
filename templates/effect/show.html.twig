@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Effect{% endblock %}
+
+{% block body %}
+    <h1>Effect</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ effect.id }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ effect.description }}</td>
+            </tr>
+            <tr>
+                <th>Dimension</th>
+                <td>{{ effect.dimension }}</td>
+            </tr>
+            <tr>
+                <th>Order_of_effect</th>
+                <td>{{ effect.orderOfEffect }}</td>
+            </tr>
+            <tr>
+                <th>Is_positive</th>
+                <td>{{ effect.isPositive ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>{{ effect.note }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('effect_index') }}">back to list</a>
+
+    <a href="{{ path('effect_edit', {'id': effect.id}) }}">edit</a>
+
+    {{ include('effect/_delete_form.html.twig') }}
+{% endblock %}

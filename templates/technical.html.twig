@@ -1,0 +1,268 @@
+{% extends 'layout_user.html.twig' %}
+{% block title %} Technical Dimension - Sustainability Awareness Framework{% endblock %}
+{% block body %}
+    <div class="d-sm-flex align-lis-center justify-content-between mb-4">
+        <h1 class="h1 mb-0 font-weight-normal text-primary">Technical Dimension</h1>
+    </div>
+
+    <ul id="pagination-technical" class="pagination-sm"></ul>
+    <div id="page1" class="page">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8">
+                <div class="card shadow mb-4">
+                    <!-- Card Header -->
+                    <div class="card-header py-3 d-flex flex-row align-lis-center justify-content-between">
+                        <h4 class="m-0 m-0 font-weight-normal text-secondary">Maintenance</h4>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <p>
+                            <strong>Maintenance</strong> means the degree to which an application is understood, repaired, or
+                            enhanced.
+                        </p>
+                        <ul>
+                            <li> (a)(b) How long is the system expected to be used for ? </li>
+                            <li> (b) In ten years time, how difficult would it be for a developer to fix bugs in the
+                                system? </li>
+                            <li> (a)(b) Are the operating system and runtime environment expect to change? </li>
+                            <ul>
+                                <li>(b) If so, what would be required from maintainers of this system?</li>
+                            </ul>
+                            <li>
+                                (a)(b) Can the correctness of the system be affected by other systems ?
+                            </li>
+                            <ul>
+                                <li>
+                                    (a)(b) Can this system affect the correctness of others ?
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-2">
+                <div class="card shadow mb-4">
+                    <!-- Card Header -->
+                    <div class="card-header py-3 d-flex flex-row align-lis-center justify-content-between">
+                        <h4 class="m-0 m-0 font-weight-normal text-secondary">Terms</h4>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <ul>
+                            <li>(a) A conceptual idea (before first design of a system)</li>
+                            <li>(b) A system evolution (system already exists or is designed)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="page2" class="page">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8">
+                <div class="card shadow mb-4">
+                    <!-- Card Header -->
+                    <div class="card-header py-3 d-flex flex-row align-lis-center justify-content-between">
+                        <h4 class="m-0 m-0 font-weight-normal text-secondary">Usability</h4>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <p>
+                            <strong>Usability</strong> means the degree to which software can be used by specified consumers to
+                            achieve quantified objectives with effectiveness, efficiency, and satisfaction in a
+                            quantified context of use.
+                        </p>
+                        <ul>
+                            <li>(a)(b) Who is expected to use the system?</li>
+                            <ul>
+                                <li>
+                                    (a)(b) How experienced are they to interact with systems like this?
+                                </li>
+                            </ul>
+                            <li>(a)(b) What can ease or make more difficult the use of the system?</li>
+                            <li>(b) Can first-time users intuitively use the system?</li>
+                            <li>(b) What are first-time, non-technical users likely to respond when asked if
+                                they would like to use this system again ?</li>
+                            <li>(b) Can experienced users get their job done efficiently ? Are they likely to bypass
+                                the system for any reason?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-2">
+                <div class="card shadow mb-4">
+                    <!-- Card Header -->
+                    <div class="card-header py-3 d-flex flex-row align-lis-center justify-content-between">
+                        <h4 class="m-0 m-0 font-weight-normal text-secondary">Terms</h4>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <ul>
+                            <li>(a) A conceptual idea (before first design of a system)</li>
+                            <li>(b) A system evolution (system already exists or is designed)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="page3" class="page">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8">
+                <div class="card shadow mb-4">
+                    <!-- Card Header -->
+                    <div class="card-header py-3 d-flex flex-row align-lis-center justify-content-between">
+                        <h4 class="m-0 m-0 font-weight-normal text-secondary">Adaptability</h4>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <p><strong>Adaptability</strong> means the ability of a system to adapt itself to fit its behaviour according
+                            to changes in its environment or in parts of the system itself. </p>
+                        <ul>
+                            <li>
+                                (a)(b) How easy would it be to add substantial new features easier/more difficult ?
+                            </li>
+                            <li>(a)(b) How likely it is that someone will want to use the system in another
+                                context ?</li>
+                            <ul>
+                                <li>
+                                    (a)(b) What can make that easier/more difficult?
+                                </li>
+                            </ul>
+                            <li>(a)(b) Is the system required to adapt itself to fit new usage scenarios?</li>
+                            <ul>
+                                <li>
+                                    (a)(b) What can make that easier/more difficult?
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-2">
+                <div class="card shadow mb-4">
+                    <!-- Card Header -->
+                    <div class="card-header py-3 d-flex flex-row align-lis-center justify-content-between">
+                        <h4 class="m-0 m-0 font-weight-normal text-secondary">Terms</h4>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <ul>
+                            <li>(a) A conceptual idea (before first design of a system)</li>
+                            <li>(b) A system evolution (system already exists or is designed)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="page4" class="page">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8">
+                <div class="card shadow mb-4">
+                    <!-- Card Header -->
+                    <div class="card-header py-3 d-flex flex-row align-lis-center justify-content-between">
+                        <h4 class="m-0 m-0 font-weight-normal text-secondary">Security</h4>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <p>
+                            <strong>Security</strong> means freedom from, or resilience against, potential harm (or other unwanted
+                            coercive change) caused by external or internal attacks.
+                        </p>
+                        <ul>
+                            <li>
+                                (a)(b) Which assets controlled by this system would be desirable to an attacker?
+                            </li>
+                            <ul>
+                                <li>
+                                    (a)(b) What are the risks associated with these assets? E.g. financial
+                                    information, people’s whereabouts or preferences, purchase history, personal
+                                    data, etc.
+                                </li>
+                            </ul>
+                            <li>
+                                (a)(b) What are the likely vulnerabilities of the system?
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-2">
+                <div class="card shadow mb-4">
+                    <!-- Card Header -->
+                    <div class="card-header py-3 d-flex flex-row align-lis-center justify-content-between">
+                        <h4 class="m-0 m-0 font-weight-normal text-secondary">Terms</h4>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <ul>
+                            <li>(a) A conceptual idea (before first design of a system)</li>
+                            <li>(b) A system evolution (system already exists or is designed)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="page5" class="page">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8">
+                <div class="card shadow mb-4">
+                    <!-- Card Header -->
+                    <div class="card-header py-3 d-flex flex-row align-lis-center justify-content-between">
+                        <h4 class="m-0 m-0 font-weight-normal text-secondary">Scalability</h4>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <p>
+                            <strong>Scalability</strong> means the systems ability to handle growing amounts of work in a graceful
+                            manner or to be enlarged horizontally or vertically and will continue to function with
+                            comparable response times.
+                        </p>
+                        <ul>
+                            <li>
+                                (a)(b) How likely is the system required to support changes in workload ?
+                            </li>
+                            <ul>
+                                <li>
+                                    (a)(b) What can make that easier/more difficult?
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-2">
+                <div class="card shadow mb-4">
+                    <!-- Card Header -->
+                    <div class="card-header py-3 d-flex flex-row align-lis-center justify-content-between">
+                        <h4 class="m-0 m-0 font-weight-normal text-secondary">Terms</h4>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <ul>
+                            <li>(a) A conceptual idea (before first design of a system)</li>
+                            <li>(b) A system evolution (system already exists or is designed)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

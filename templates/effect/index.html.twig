@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Effect index{% endblock %}
+
+{% block body %}
+    <h1>Effect index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>Dimension</th>
+                <th>Order_of_effect</th>
+                <th>Is_positive</th>
+                <th>Note</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for effect in effects %}
+            <tr>
+                <td>{{ effect.id }}</td>
+                <td>{{ effect.description }}</td>
+                <td>{{ effect.dimension }}</td>
+                <td>{{ effect.orderOfEffect }}</td>
+                <td>{{ effect.isPositive ? 'Yes' : 'No' }}</td>
+                <td>{{ effect.note }}</td>
+                <td>
+                    <a href="{{ path('effect_show', {'id': effect.id}) }}">show</a>
+                    <a href="{{ path('effect_edit', {'id': effect.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('effect_new') }}">Create new</a>
+{% endblock %}

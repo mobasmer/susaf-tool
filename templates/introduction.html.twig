@@ -1,0 +1,295 @@
+{% extends 'layout_user.html.twig' %}
+{% block title %} Introduction - Sustainability Awareness Framework{% endblock %}
+{% block body %}
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h1 mb-0 text-primary font-weight-normal">Introduction to Sustainability Awareness Framework</h1>
+    </div>
+
+    <div class="row">
+
+        <!-- What is SusAF?-->
+        <div class="col-xl-10 col-lg-9">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h4 class="m-0 m-0 font-weight-normal text-secondary">What is the Sustainability Awareness Framework?</h4>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <p>The Sustainability Awareness Framework (SusAF) is "a question-based framework for raising awareness of the potential
+                        effects of software systems on sustainability". It is made up of five question sets - one set for each <a href="{{ path('app_sustainability') }}">sustainability</a> dimension - and a new diagram type, the Sustainability Awareness Diagram (SusAD). The former serves as a starting point to identify effects, the latter is used to visualize the effects and chains of effects.</p>
+                    <p>A SusAF workshop is split into four stages: Warm-up, Capture, Analysis and Synthesis. A role is allotted to each participant:</p>
+                    <ul>
+                        <li>Moderator: The moderator guides through the workshop and facilitates the application of the SusAF.</li>
+                        <li>Scribe: The scribe documents the workshop, especially the thoughts expressed in the discussions.</li>
+                        <li>Stakeholders: The stakeholders provide insights and knowledge on the part of the system that is studied during the workshop.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Process -->
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h2 class="h2 mb-0 font-weight-normal text-primary">The Process</h2>
+    </div>
+
+    <div class="row">
+
+    <!-- Warm-Up -->
+       <div class="col-xl-6 col-lg-5">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h4 class="m-0 font-weight-normal text-secondary">1. Warm-Up</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        The moderator welcomes and explains the logistics.
+                    </li>
+                    <li class="list-group-item">
+                        The company introduces the product or system.
+                    </li>
+                    <li class="list-group-item">
+                        The moderator introduces SusAF.
+                    </li>
+                </ul>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <strong>Outcome: System vision, known effects</strong>
+                </div>
+            </div>
+
+        <!-- Analysis -->
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h4 class="m-0 font-weight-normal text-secondary">3. Analysis</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        The moderator presents and raises open questions.
+                    </li>
+                    <li class="list-group-item">
+                        The group classifies the previously collected effects into three orders and five sustainability dimensions.
+                    </li>
+                    <li class="list-group-item">
+                        The group identifies chains of effects.
+                    </li>
+                    <li class="list-group-item">
+                        The stakeholders discuss relations across dimensions.
+                    </li>
+                    <li class="list-group-item">
+                        Potential actions to mitigate and change are discussed.
+                    </li>
+                </ul>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <strong>Outcome: Classified effects, Chains of effects</strong>
+                    <br>
+                    <br>
+                    <a class="btn btn-primary" href="{{ path('app_effects') }}" class="card-link"><i class="fa fa-play-circle"></i> Classify the effects</a>
+                </div>
+             </div>
+        </div>
+
+
+        <!-- Capture -->
+        <div class="col-xl-6 col-lg-5">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h4 class="m-0 m-0 font-weight-normal text-secondary">2. Capture</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        The moderator leads through the dimensions by use of the question sets.
+                    </li>
+                    <li class="list-group-item">
+                        The stakeholders brainstorm, reflect and discuss.
+                    </li>
+                    <li class="list-group-item">
+                        The scribe takes notes and denotes cross references.
+                    </li>
+                </ul>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <strong>Outcome: Discussion notes</strong>
+                    <br>
+                    <br>
+                    <a class="btn btn-primary" href="{{ path('app_individual_dimension') }}" class="card-link"><i class="fa fa-play-circle"></i> Start with the questions</a>
+                </div>
+            </div>
+
+        <!-- Synthesis -->
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h4 class="m-0 font-weight-normal text-secondary">4. Synthesis</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        The moderator facilitates the synthesis of chains of effects into diagram(s).
+                    </li>
+                    <li class="list-group-item">
+                        Detail diagrams can be added for in-depth visualization.
+                    </li>
+                    <li class="list-group-item">
+                        Threats and opportunities are summarised in the report.
+                    </li>
+                </ul>
+                <div class="card-body">
+                    <strong>Outcome: Diagrams, Report</strong>
+                    <br>
+                    <br>
+                    <a class="btn btn-primary" href="{{ path('app_effects') }}" class="card-link"><i class="fa fa-play-circle"></i> Visualize effects in SusADs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Elements -->
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h2 class="h2 mb-0 text-primary font-weight-normal"><a name="core">Core Elements</a></h2>
+    </div>
+
+    <div class="row">
+
+        <!-- Questions -->
+        <div class="col-xl-6 col-lg-5">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h4 class="m-0 font-weight-normal text-secondary">The Questions</h4>
+                </div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Dimension</th>
+                        <th>Topics</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Social</td>
+                        <td>Sense of community, trust, inclusiveness, equity, participation</td>
+                    </tr>
+                    <tr>
+                        <td>Individual</td>
+                        <td>Health, Lifelong learning, privacy, safety, agency</td>
+                    </tr>
+                    <tr>
+                        <td>Environmental</td>
+                        <td>Material & resources, waste & pollution, energy, biodiversity, logistics</td>
+                    </tr>
+                    <tr>
+                        <td>Economic</td>
+                        <td>Value, CRM, supply chain, governance, innovation</td>
+                    </tr>
+                    <tr>
+                        <td>Technical</td>
+                        <td>Maintainability, usability, adaptability, security, scalability</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- The Report -->
+        <div class="col-xl-6 col-lg-5">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h4 class="m-0 font-weight-normal text-secondary">The Report</h4>
+                </div>
+              <div class="card-body">
+                  The report includes:
+                  <ul>
+                      <li>System vision</li>
+                      <li>Initial perception of sustainability effects</li>
+                      <li>Highlights: key effects</li>
+                      <li>Diagram(s) of the key chains of effects</li>
+                      <li>Threats vs. Opportunities</li>
+                      <li>Appendix: further diagrams and the full list of effects from analysis</li>
+                  </ul>
+              </div>
+            </div>
+
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h4 class="m-0 font-weight-normal text-secondary">The Diagram</h4>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>Visualization of the effects, arranged into</li>
+                        <ul>
+                            <li>Five sustainability dimensions</li>
+                            <li>Three orders of effect</li>
+                        </ul>
+                        <li>Links between the effects visualize (presumptive) causal relationships.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h2 class="h2 mb-0 text-primary font-weight-normal">Further information</h2>
+    </div>
+
+    <div class="row">
+
+        <!-- Further information?-->
+        <div class="col-xl-9 col-lg-8">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h4 class="m-0 font-weight-normal text-secondary">Where can I find more information on SusAF?</h4>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <p>For further information, please visit <a href="https://www.sustainabilitydesign.org/"><i class="fas fa-external-link-alt"></i> sustainabilitydesign.org</a> or refer to these papers:</p>
+                    <ul>
+                        <li>Duboc, Leticia, et al. <a href="https://pure.hud.ac.uk/ws/files/17746898/RE_19_SusAD_6.pdf"><i class="fas fa-external-link-alt"></i> "Do we really know what we are building? Raising awareness of potential Sustainability Effects of Software Systems in Requirements Engineering."</a> 2019 IEEE 27th International Requirements Engineering Conference (RE). IEEE, 2019</li>
+                        <li>Penzenstadler, Birgit, et al. <a href="http://shura.shu.ac.uk/26075/1/Dearden_Raising_Awareness_For%28VoR%29.pdf"><i class="fas fa-external-link-alt"></i>"Raising awareness for potential sustainability effects in Uganda: A survey-based empirical study."</a> Proceedings of the 8th International Workshop on Requirements Engineering for Sustainable Systems co-located with 27th International Conference on Requirements Engineering. Vol. 2541. CEUR-WS, 2020.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-3">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h4 class="m-0 font-weight-normal text-secondary">Suggested timing</h4>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <dl class="row">
+                                <dt class="col-sm-6">Warm-Up</dt>
+                                <dd class="col-sm-6">30 min</dd>
+
+                                <dt class="col-sm-6">Capture</dt>
+                                <dd class="col-sm-6">90+90 min</dd>
+
+                                <dt class="col-sm-6">Lunch</dt>
+                                <dd class="col-sm-6"></dd>
+
+                                <dt class="col-sm-6">Analysis</dt>
+                                <dd class="col-sm-6">120 min</dd>
+
+                                <dt class="col-sm-6">Synthesis</dt>
+                                <dd class="col-sm-6">90 min</dd>
+                    </dl>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

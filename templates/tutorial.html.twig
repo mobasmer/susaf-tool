@@ -1,0 +1,66 @@
+{% extends 'layout_user.html.twig' %}
+{% block title %} Tutorial - Sustainability Awareness Framework{% endblock %}
+{% block body %}
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h1 mb-0 font-weight-normal text-primary">How To Use This Tool</h1>
+    </div>
+    <div class="row">
+
+        <!-- Tutorial-->
+        <div class="col-xl-6 col-lg-5">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h4 class="m-0 m-0 font-weight-normal text-secondary">Manage effects</h4>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <dt>New Effects</dt>
+                    <dd>Click "Add new effect" and after entering all the relevant information, click on submit or press Enter.</dd>
+
+                    <dt>Select causes and consequences</dt>
+                    <dd>You may add causes or consequences to an effect by clicking the respective effect in the list ("Leads to" / "Caused by").
+                    To select multiple effects in the list, press and hold Ctrl while selecting all the relevant effects in the list.</dd>
+
+                    <dt>Show and edit effects</dt>
+                    <dd>Click on the Edit button in the row of the effect in question. You will see an overview including all the links.</dd>
+
+                    <dt>Export effects</dt>
+                    <dd>You can export the list of effects as PDF, CSV or print. Just click the corresponding button above the table view.</dd>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-6 col-lg-5">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h4 class="m-0 m-0 font-weight-normal text-secondary">Manage diagrams</h4>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <dl>
+                      <dt>Create SusAD from Selected</dt>
+                      <dd>Select the effects you want to include in the SusAD. The diagram will show the selected effects and the links between them.</dd>
+
+                      <dt>Discover effect chains</dt>
+                      <dd>This option allows you to select a few effects and automatically generates a diagram that shows the chain of consequences.</dd>
+
+                      <dt>Export SusAD</dt>
+                      <dd>To date, you can only save a SusAD by exporting it as a PNG file.</dd>
+
+                      <dt>Remove effects</dt>
+                      <dd>An effect is removed from the diagram (but not from the table view) by double-clicking it.</dd>
+
+                      <dt>Remove links</dt>
+                      <dd>A link may be removed from the diagram (but not from the table view) by double-clicking it or by using the Remove button.</dd>
+
+                      <dt>Move elements</dt>
+                      <dd>Effects as well as link may be moved by drag-and-drop. If you move an effect to another dimension or order, this change will be saved in the table view as well.</dd>
+
+                  </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

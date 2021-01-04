@@ -1,0 +1,87 @@
+{% extends 'layout_user.html.twig' %}
+{% block title %} Effects - Sustainability Awareness Framework{% endblock %}
+{% block body %}
+    <div class="d-sm-flex align-ite
+    ms-center justify-content-between mb-4">
+        <h1 class="h1 mb-0 text-primary font-weight-normal">Effects</h1>
+    </div>
+    <div id="database-effects" data-effects="{{ effects|json_encode }}"></div>
+    <div id="susaf-effects">
+        <table id="effects-table" class="display" style="width:75%">
+            <thead>
+            <tr>
+                <th></th>
+                <th>ID</th>
+                <th>Label</th>
+                <th>Dimension</th>
+                <th>Order</th>
+                <th>Outcome?</th>
+                <th>Description</th>
+                <th>Edit / Delete</th>
+            </tr>
+            </thead>
+        </table>
+        <div id="table-buttons">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseAddEffect"
+                    aria-expanded="false" aria-controls="collapseAddEffect"><i class="fa fa-plus"></i> Add new effect
+            </button>
+            <button class="btn btn-danger" id="delete-selected">
+                <i class="fa fa-trash"></i> Delete selected rows
+            </button>
+            <button class="btn btn-secondary" id="show-selected" title="Include only selected effects and the associations among those.">
+                <i class="fa fa-project-diagram"></i> Create SusAD from Selected
+            </button>
+            <button class="btn btn-secondary" id="create-chains" title="Generate the effect chains automatically, starting from the selected effects.">
+                <i class="fas fa-magic"></i> Discover chains of effects
+            </button>
+            <button class="btn btn-secondary" id="update-diagram" title="Incremental update of diagram.">
+                <i class="fa fa-arrow-circle-right"></i> Update SusAD
+            </button>
+        </div>
+        {% include 'create_effect.html.twig' %}
+        {% include 'edit_effect.html.twig' %}
+    </div>
+
+    <div id="susad" class="container center mb-4">
+        <div id="paper" class="mb-4"></div>
+        <canvas id="canvas" width="1000" height="1000"></canvas>
+        <button class="btn btn-secondary" id="back-to-table"><i class="fa fa-arrow-circle-left"></i> Back</button>
+        <a id="dl" class="btn btn-primary" download="Canvas.png" href="#"><i class="fa fa-image"></i> Save diagram</a>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tutorialModal">
+            <i class="fas fa-info-circle"></i> Help
+        </button>
+        <div class="mt-2" id = "update_alert_placeholder"></div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="tutorialModal" tabindex="-1" role="dialog" aria-labelledby="tutorialModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="tutorialModalLabel">How to adapt this diagram</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <dl>
+                            <dt>Moving elements</dt>
+                            <dd>Just drag and drop the elements to their new position. By moving the effect to another dimension or order of effect, the effect will be re-classified.</dd>
+
+                            <dt>Remove element from diagram</dt>
+                            <dd>Double-click on an element to remove it and its edges from the diagram. (Neither the node nor its edges are removed from the database!)</dd>
+
+                            <dt>Remove edge from diagram </dt>
+                            <dd>Hover over the edge in question and use the emerging tools, or double-click on the edge. (The edge is not removed from the database!) </dd>
+                        </dl>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,159 @@
+{% extends 'layout_user.html.twig' %}
+{% block title %} Environmental Dimension - Sustainability Awareness Framework{% endblock %}
+{% block body %}
+<div class="d-sm-flex align-lis-center justify-content-between mb-4">
+    <h1 class="h1 mb-0 text-primary font-weight-normal">Environmental Dimension</h1>
+</div>
+
+<ul id="pagination-environmental" class="pagination-sm"></ul>
+<div id="page1" class="page">
+    <div class="row">
+        <div class="col-xl-10 col-lg-9">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-lis-center justify-content-between">
+                    <h4 class="m-0 m-0 font-weight-normal text-secondary">Material and resources</h4>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <p>
+                        <strong>Material</strong> and <strong>resources</strong> includes everything that is needed to manufacture, produce,
+                        deploy, run, and remove a system.
+                    </p>
+                    <ul>
+                        <li> Which materials may be consumed to produce the system?</li>
+                        <li> What about to use the system? For example, supplies or additionally required hardware. </li>
+                        <li> Does the system change the way people consume material ? For example, encourage people to buy more? </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="page2" class="page">
+    <div class="row">
+        <div class="col-xl-10 col-lg-9">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-lis-center justify-content-between">
+                    <h4 class="m-0 m-0 font-weight-normal text-secondary">Waste and pollution</h4>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <p>
+                        <strong>Waste</strong> and <strong>pollution</strong> means looking into the effects the system might have on soil,
+                        atmospheric, and water pollution.
+                    </p>
+                    <ul>
+                        <li> Does producing parts of the system or other supplies for it generate waste or
+                        emissions ?</li>
+                        <li> Does the use of the system itself produce waste or emissions ? </li>
+                        <li> Does the system influence how much waste or emissions people or institutions
+                            generate? Or, alternatively, does it promote (or impair) recycling ?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="page3" class="page">
+    <div class="row">
+        <div class="col-xl-10 col-lg-9">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-lis-center justify-content-between">
+                    <h4 class="m-0 m-0 font-weight-normal text-secondary">Energy</h4>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <p><strong>Energy</strong> means all energy that is used by or for the system as well as any external energy
+                            system the system under analysis may affect. </p>
+                    <ul>
+                        <li>Does the system affect the need for production of energy ? If so, how?</li>
+                        <li>What about the use of energy ? E.g. enables or encourages less energy consumption or consumption from renewable sources.</li>
+                        <li>Does the energy to run the system hardware come from renewable energy sources ? If not, is there a way to incentivise renewable energy?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="page4" class="page">
+    <div class="row">
+        <div class="col-xl-10 col-lg-9">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-lis-center justify-content-between">
+                    <h4 class="m-0 m-0 font-weight-normal text-secondary">Biodiversity</h4>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <p>
+                        <strong>Biodiversity</strong> includes the effects of a system on biodiversity in its operational
+                        environment as well as any other affected land use.
+                    </p>
+                    <ul>
+                        <li>
+                            Can the system impact the plants or animals around it ?
+                        </li>
+                        <ul>
+                            <li>
+                                What about elsewhere ?
+                            </li>
+                        </ul>
+                        <li>
+                            Can the system change the size , use, of composition of the soil around it?
+                        </li>
+                        <ul>
+                            <li>
+                                For example, by occupying land or by converting land into cropland ?
+                            </li>
+                            <li>
+                                What about elsewhere ?
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="page5" class="page">
+    <div class="row">
+        <div class="col-xl-10 col-lg-9">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-lis-center justify-content-between">
+                    <h4 class="m-0 m-0 font-weight-normal text-secondary">Logistics</h4>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <p>
+                        <strong>Logistics</strong> means the effects of the system on whether, and if so, how much and how far
+                        people and/or goods have to move or be moved.
+                    </p>
+                    <ul>
+                        <li>
+                            Does the system affect the need for moving people or goods ?
+                            If so, how?
+                        </li>
+                        <li>
+                            Does the system affect the means by which people or goods move?
+                            If so, how?
+                        </li>
+                        <li>
+                            Does the system affect the distance that people or goods move?
+                            If so, how?
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

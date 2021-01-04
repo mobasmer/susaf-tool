@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Sustainability Awareness Framework</title>
+    <link rel="icon shortcut" type="image/PNG" href="{{ asset('build/images/favicon-16x16.png') }}"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Neucha|Open+Sans|Roboto|Roboto+Condensed|Shadows+Into+Light|Source+Sans+Pro&display=swap"
+          rel="stylesheet">
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+</head>
+<body class="bg-gradient-primary">
+
+<div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-xl-10 col-lg-12 col-md-9">
+
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-6 d-none d-lg-block bg-register-image"></div>
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Welcome!</h1>
+                                </div>
+
+                                You're registered now! Please wait until the admin activates your account.
+
+                                <a class="btn btn-primary mt-4 center" href="{{ path('app_homepage') }}"> Back to homepage </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+</body>
+</html>
