@@ -9,6 +9,12 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * Class QuestionsController
+ * @package App\Controller
+ *
+ * Manages the question pages and returns them upon request.
+ */
 
 class QuestionsController extends AbstractController
 {

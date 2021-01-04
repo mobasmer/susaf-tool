@@ -14,6 +14,8 @@ use Symfony\Component\HttpFoundation\Response;
 class HomeController extends AbstractController
 {
     /**
+     * Shows the dashboard including the key figures.
+     *
      * @Route("/susaf", name="app_dashboard")
      */
     public function fetchDashboard(Request $request) : Response
@@ -32,6 +34,8 @@ class HomeController extends AbstractController
     }
 
     /**
+     * Shows the introduction page.
+     *
      * @Route("/susaf/introduction", name="app_introduction")
      */
     public function fetchIntroduction(Request $request) : Response
@@ -40,6 +44,8 @@ class HomeController extends AbstractController
     }
 
     /**
+     * Shows the homepage.
+     *
      * @Route("/", name="app_homepage")
      */
     public function fetchHomepage(Request $request) : Response
@@ -48,6 +54,8 @@ class HomeController extends AbstractController
     }
 
     /**
+     * Shows the privacy policy.
+     *
      * @Route("/privacy-policy", name="app_privacy")
      */
     public function fetchPrivacyPolicy(Request $request) : Response
@@ -56,6 +64,8 @@ class HomeController extends AbstractController
     }
 
     /**
+     * Shows the terms and conditions page.
+     *
      * @Route("/terms-and-conditions", name="app_terms")
      */
     public function fetchTerms(Request $request) : Response
@@ -63,6 +73,9 @@ class HomeController extends AbstractController
         return $this->render('terms.html.twig', []);
     }
 
+    /**
+     *  Finds all the effects pertaining to the logged-in user.
+     */
     public function show(){
         $repository = $this->getDoctrine()->getRepository(Effect::class);
         $userRepository = $this->getDoctrine()->getRepository(User::class);

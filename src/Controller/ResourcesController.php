@@ -8,6 +8,12 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * Class ResourcesController
+ * @package App\Controller
+ *
+ * Manages the pages belonging to the category resources and returns them upon request.
+ */
 
 class ResourcesController extends AbstractController
 {

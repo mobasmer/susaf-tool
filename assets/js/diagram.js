@@ -5,11 +5,11 @@ let graph, points, arcs, paper, cells, thickness, center_radius, paper_size;
 /**
  Sets up the paper and graph (jointjs) and draws the background.
 
- @param{int}        size               Diameter of the diagram
- @param{Array}      dimension_names    Names of the dimensions
- @param{Array}      order_names        Names of the order of effects
- @param{Function}   deselect           Enables deselection of elements from within the diagram
- @param{Function}   reclassify         Communicates changes in the diagram to the database
+ @param{int}        size               Diameter of the diagram.
+ @param{Array}      dimension_names    Names of the dimensions.
+ @param{Array}      order_names        Names of the order of effects.
+ @param{Function}   deselect           Enables deselection of elements from within the diagram.
+ @param{Function}   reclassify         Communicates changes in the diagram to the database.
  */
 
 function drawDiagram(size, dimension_names, order_names, deselect, reclassify) {
@@ -111,10 +111,10 @@ function drawDiagram(size, dimension_names, order_names, deselect, reclassify) {
 
  Implemented as DSF with cycle-check from each node in the seed set selectedEffects.
 
- @param{Array}       selectedEffects     Effects selected by the user, serves as a "seed"
- @param{Array}       effects             Total effects
- @param{Object}      mapping             Used to map translate dimension names to numbers
- @param{Function}    select              Used to select effects in the table from within the diagram
+ @param{Array}       selectedEffects     Effects selected by the user, serves as a "seed".
+ @param{Array}       effects             Total effects.
+ @param{Object}      mapping             Used to map translate dimension names to numbers.
+ @param{Function}    select              Used to select effects in the table from within the diagram.
  */
 
 function addEffects(selectedEffects, effects, mapping, select) {
@@ -173,9 +173,9 @@ function addEffects(selectedEffects, effects, mapping, select) {
 
  This function is also used to update the diagram.
 
- @param{Array}  selectedEffects   Effects selected by the user, serves as a "seed"
- @param{Array}  effects           Total effects
- @param{Object} mapping           Used to translate dimension names to numbers
+ @param{Array}  selectedEffects   Effects selected by the user, serves as a "seed".
+ @param{Array}  effects           Total effects.
+ @param{Object} mapping           Used to translate dimension names to numbers.
  */
 
 function addSelectedEffectsOnly(selectedEffects, effects, mapping) {
@@ -219,13 +219,13 @@ function addSelectedEffectsOnly(selectedEffects, effects, mapping) {
  This function is used if the node has not been created directly before calling this function, thus it needs to consider
  whether links already exist.
 
- @param{Array}                 lst                 Contains ids of related effects
- @param{Element}               cell                Cell representing an effect
- @param{Array}                 selectedEffects     Effects selected by the user, serves as a "seed"
- @param{Array}                 effects             Total effects
- @param{Object}                mapping             Used to map translate dimension names to numbers
- @param{boolean}               outgoing            Determines whether we are looking at consequences or causes
- @param{Array}                 links               Collection of the links
+ @param{Array}                 lst                 Contains ids of related effects.
+ @param{Element}               cell                Cell representing an effect.
+ @param{Array}                 selectedEffects     Effects selected by the user, serves as a "seed".
+ @param{Array}                 effects             Total effects.
+ @param{Object}                mapping             Used to map translate dimension names to numbers.
+ @param{boolean}               outgoing            Determines whether we are looking at consequences or causes.
+ @param{Array}                 links               Collection of the links.
  */
 
 function addNeighborsToExistingNode(lst, cell, selectedEffects, effects, mapping, outgoing, links) {
@@ -266,13 +266,13 @@ function addNeighborsToExistingNode(lst, cell, selectedEffects, effects, mapping
  This function is used if the node has been created directly before calling this function, thus it does not need to consider
  whether links already exist.
 
- @param{Array}                lst                 Contains ids of related effects
- @param{Element}              cell                Cell representing an effect
- @param{Array}                selectedEffects     Effects selected by the user, serves as a "seed"
- @param{Array}                effects             Total effects
- @param{Object}               mapping             Used to map translate dimension names to numbers
- @param{boolean}              outgoing            Determines whether we are looking at consequences or causes
- @param{Array}                links               Collection of the links to be generated
+ @param{Array}                lst                 Contains ids of related effects.
+ @param{Element}              cell                Cell representing an effect.
+ @param{Array}                selectedEffects     Effects selected by the user, serves as a "seed".
+ @param{Array}                effects             Total effects.
+ @param{Object}               mapping             Dictionary used to map translate dimension names to numbers.
+ @param{boolean}              outgoing            Determines whether we are looking at consequences or causes.
+ @param{Array}                links               Collection of the links to be generated.
  */
 
 function addNeighborsToNewNode(lst, cell, selectedEffects, effects, mapping, outgoing, links) {
@@ -300,8 +300,8 @@ function addNeighborsToNewNode(lst, cell, selectedEffects, effects, mapping, out
 /**
  * Adds a link between two given nodes.
  *
- * @param{Element}    source
- * @param{Element}    target
+ * @param{Element}    source    Source node of the link.
+ * @param{Element}    target    Target node of the link.
  */
 
 function addLink(source, target) {
@@ -370,10 +370,10 @@ function addToolViewToLink(link) {
 /**
  Builds the diagram, i.e. the background incl. labels of the dimensions and orders of effects
 
- @param{int}        size               Diameter of the diagram
- @param{Array}      dimension_names    Names of the dimensions
- @param{Array}      order_names        Names of the order of effects
- @param{int}        center_radius      Radius of the "inner" circle of the diagram
+ @param{int}        size               Diameter of the diagram.
+ @param{Array}      dimension_names    Names of the dimensions.
+ @param{Array}      order_names        Names of the order of effects.
+ @param{int}        center_radius      Radius of the "inner" circle of the diagram.
  */
 
 function describeSusAD(size, dimension_names, order_names, center_radius) {
@@ -424,13 +424,14 @@ function describeSusAD(size, dimension_names, order_names, center_radius) {
 }
 
 /**
+ *      Creates an arc which denotes a specific order of effect in a dimension.
  *
- * @param center
- * @param radius
- * @param thickness
- * @param dim_angle
- * @param angle
- * @param color
+ * @param center                   Center point (x,y)
+ * @param radius                   Radius of the diagram.
+ * @param thickness                Thickness of the resulting arc.
+ * @param dim_angle                Angle where the arc starts in the diagram.
+ * @param angle                    Size of the angle for each arc.
+ * @param color                    Color of the arc.
  * @returns {{arc: shapes.standard.Path, points: {start: {x: number, y: number}, end2: {x: number, y: number}, end: {x: number, y: number}, start2: {x: number, y: number}}}}
  */
 function createArc(center, radius, thickness, dim_angle, angle, color) {
@@ -455,7 +456,7 @@ function createArc(center, radius, thickness, dim_angle, angle, color) {
 }
 
 /**
-    Assigns a color to each circular segment of the annulus that represents the order of effect
+    Assigns a color to each annulus that represents the order of effect.
  **/
 function assignColor(i) {
     let color;
@@ -478,12 +479,12 @@ function assignColor(i) {
 }
 
 /**
- * Adds the dimension name as text to the background svg on top of the corresponding segment
- * @param angle
- * @param radius
- * @param dimension_name
- * @param dimension_number
- * @param points
+ * Adds the dimension label to the SusAD background on top of the corresponding dimension segment
+ * @param angle                 Angle used to describe an arc.
+ * @param radius                Radius of arc.
+ * @param dimension_name        Name of the dimension.
+ * @param dimension_number      Number of the dimension.
+ * @param points                Starting and end points of the arc.
  */
 function addDimensionLabel(angle, radius, dimension_name, dimension_number, points) {
     let largeArcFlag = angle <= 180 ? "0" : "1";
@@ -495,6 +496,13 @@ function addDimensionLabel(angle, radius, dimension_name, dimension_number, poin
 
     addTextPath(d, id, dimension_name, points, offset);
 }
+
+/**
+ * Adds the label for the order of effect as svg path
+ * @param points        Starting and ending points used to describe an arc.
+ * @param i             Number of the order.
+ * @param order_name    Label of the order in question.
+ */
 
 function addOrderLabel(points, i, order_name) {
     let d = ["M", points.end.x - points.start.x, points.end.y - points.start.y,
@@ -509,11 +517,11 @@ function addOrderLabel(points, i, order_name) {
 /**
  Aligns a text to a given path.
 
- @param{String}     d                  SVG path
- @param{String}     id                 Id assigned to path element and to be referenced by the textpath element
- @param{String}     textContent        Textual content of the text path
- @param{Object}     points             Actual position of the corresponding arc
- @param{String}     offset             Offset of the text on the path
+ @param{String}     d                  SVG path.
+ @param{String}     id                 Id assigned to path element and to be referenced by the textpath element.
+ @param{String}     textContent        Textual content of the text path.
+ @param{Object}     points             Actual position of the corresponding arc.
+ @param{String}     offset             Offset of the text on the path.
 
  */
 
@@ -554,7 +562,7 @@ function addTextPath(d, id, textContent, points, offset) {
  @param{int}        order                 Number referring to the corresponding order of effect.
  @param{String}     label                 Textual content of the element.
  @param{boolean}    isPositive            Whether the effective is positive or not.
- @param{int}        id                    Offset of the text on the path
+ @param{int}        id                    Offset of the text on the path.
  */
 
 function addEffect(dimension, order, label, isPositive, id) {
@@ -678,6 +686,13 @@ function positionEffect(effect, order, start_angle, end_angle) {
     return effect;
 }
 
+/**
+ *
+ * @param order             order of effect indicates the circular segment in question.
+ * @param start_angle       starting angle of the arc.
+ * @param end_angle         end angle of the arc.
+ * @returns {{x: number, y: number}}
+ */
 function getRandomPosition(order, start_angle, end_angle) {
     const angle = getRandomInt(start_angle + 5, end_angle - 5);
     const min_radius = center_radius + (order - 1) * thickness + 10;
@@ -715,6 +730,10 @@ function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
         y: centerY + (radius * Math.sin(angleInRadians))
     };
 }
+
+/**
+    Computes a random integer value between min and max.
+ */
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;

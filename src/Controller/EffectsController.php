@@ -36,6 +36,11 @@ class EffectsController extends AbstractController
         }
     }
 
+    /**
+     * Returns all effects in the database.
+     *
+     * @return Effect[]|object[]
+     */
     public function show(){
         $repository = $this->getDoctrine()->getRepository(Effect::class);
         return $repository->findAll();
@@ -43,6 +48,8 @@ class EffectsController extends AbstractController
 
 
     /**
+     * Returns all the effects that were created by a specific user.
+     *
      * @Route("/susaf/effects/load_effects", name="app_effects_load_effects")
      */
     public function showEffectsWithRelations(Request $request) : Response {
@@ -68,6 +75,8 @@ class EffectsController extends AbstractController
     }
 
     /**
+     * Deletes an effect from the database.
+     *
      * @Route("/susaf/effects/delete_effect", name="app_effects_delete_effect", methods="POST")
      */
 
@@ -85,6 +94,8 @@ class EffectsController extends AbstractController
     }
 
     /**
+     * Deletes a number of selected effects from the database.
+     *
      * @Route("/susaf/effects/delete_selected", name="app_effects_delete_selected", methods="POST")
      */
 
@@ -107,6 +118,8 @@ class EffectsController extends AbstractController
     }
 
     /**
+     * Updates the details of an effect, including the relations.
+     *
      * @Route("/susaf/effects/update_effect", name="app_effects_update_effect", methods="POST")
      */
 
@@ -179,6 +192,8 @@ class EffectsController extends AbstractController
     }
 
     /**
+     * Updates only the dimension and / or order of an effect.
+     *
      * @Route("/susaf/effects/update_position", name="app_effects_update_position", methods="POST")
      */
 
@@ -214,6 +229,8 @@ class EffectsController extends AbstractController
     }
 
     /**
+     * Creates a new effect and saves it to the database.
+     *
      * @Route("/susaf/effects/create_effect", name="app_effects_create_effect", methods="POST")
      */
     public function create_effect(Request $request):Response{
@@ -255,6 +272,10 @@ class EffectsController extends AbstractController
         $response->setStatusCode(Response::HTTP_BAD_REQUEST);
         return $response;
     }
+
+    /**
+     * Updates the details of an effect.
+     */
 
     private function update_fields(Request $request, Effect $effect) {
             $dim = $request->get('dimension');

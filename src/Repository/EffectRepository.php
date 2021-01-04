@@ -49,6 +49,11 @@ class EffectRepository extends ServiceEntityRepository
     }
     */
 
+
+    /**
+     * Computes total number of links for the logged-in user.
+     *
+     */
     public function getNumberOfLinks(int $userId): int {
         $effects = $this->findBy(
             ['creator' => $userId]
@@ -65,6 +70,10 @@ class EffectRepository extends ServiceEntityRepository
         return $sum;
     }
 
+    /** Computes the dimension with most effects for the logged-in user.
+     * @param int $userId
+     * @return string
+     */
     public function getMostCommonDimension(int $userId): string {
         $entityManager = $this->getEntityManager();
 

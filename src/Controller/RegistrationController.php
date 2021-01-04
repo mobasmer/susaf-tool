@@ -19,6 +19,12 @@ use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 
+/**
+ * Class RegistrationController
+ * @package App\Controller
+ *
+ * Handles the registration of a new user.
+ */
 class RegistrationController extends AbstractController
 {
     /**

@@ -238,9 +238,9 @@ $(document).ready(function () {
         },
     });
 
-    /**
+    /*
     *  Deletes selected row
-    **/
+    */
 
     $('#effects-table').on('click', '.delete-row', function (e) {
         let delRow = table
@@ -270,9 +270,9 @@ $(document).ready(function () {
             "wrapper").toggleClass("toggled");
     });
 
-    /**
+    /*
     *  Saves changes for selected effect
-    **/
+    */
     $('#save-edit').on('click', function(e){
         e.preventDefault(); // avoid to execute the actual submit of the form.
 
@@ -329,9 +329,9 @@ $(document).ready(function () {
         });
     });
 
-    /**
+    /*
     *  Shows data for selected effect.
-    **/
+    */
 
     $('#effects-table').on('click', '.edit-row', function () {
         let data = table
@@ -357,9 +357,9 @@ $(document).ready(function () {
         markSelected(opts, consequences);
     });
 
-    /**
+    /*
     *  Deletes selected rows
-    **/
+    */
 
     $('#delete-selected').on('click', function () {
         let data = table
@@ -399,9 +399,9 @@ $(document).ready(function () {
         }
     });
 
-    /**
+    /*
     * Saves a new effect.
-    **/
+    */
     $("#form-add-effect").submit(function (e) {
 
         e.preventDefault(); // avoid to execute the actual submit of the form.
@@ -457,9 +457,9 @@ $(document).ready(function () {
 
     });
 
-    /**
+    /*
      *  Resets forms when closing them
-     **/
+     */
 
      $('#cancel-add-effect').on('click', function () {
          $('#form-add-effect')[0].reset();
@@ -472,9 +472,9 @@ $(document).ready(function () {
     });
 
 
-    /**
+    /*
      * Download SusAD as a PNG file.
-     **/
+     */
     $('#dl').on('click', function(){
 
         /* Based on library: save-svg-to-png
@@ -489,9 +489,9 @@ $(document).ready(function () {
         });
     });
 
-    /**
-    *  Create a SusAD for the selected effects.
-    **/
+    /*
+    *  Create a SusAD containing the chains of effects of the selected effects.
+    */
 
      $('#create-chains').on('click', function(){
          let mapping = {
@@ -523,6 +523,9 @@ $(document).ready(function () {
          //$("#susad").show();
     });
 
+     /*
+        Creates a SusAD containing only the selected effects as well as the links between them
+      */
     $('#show-selected').on('click', function(){
         const mapping = {
             'ind': 0,
@@ -551,6 +554,9 @@ $(document).ready(function () {
         //$("#susad").show();
     });
 
+    /*
+        Goes back to the table by hiding the diagram and showing the table.
+     */
     $("#back-to-table").on('click', function(){
         if($("#update-diagram").css('display') == 'none'){
             $('#update-diagram').show();
@@ -560,9 +566,9 @@ $(document).ready(function () {
         $("#susad").hide();
     });
 
-    /**
+    /*
      * Update already existent diagram while preserving the layout etc.)
-     **/
+     */
 
     $('#update-diagram').on('click', function(){
         let mapping = {
@@ -585,8 +591,8 @@ $(document).ready(function () {
 /**
  * Adds options (effects) to the multi-select fields (used to link effects)
  *
- * @param data
- * @param sel
+ * @param data  Data of the effects that are to be added as options
+ * @param sel   Multi-select field
  */
 function addOptions(data, sel) {
     if (data.length) {
@@ -666,7 +672,7 @@ function prepareAjaxRequest(selector){
 /**
  * Assigns a new dimension and / or dimension to an effect.
  *
- * @param{String} id
+ * @param{String} id    id of the effect
  * @param{String} order
  * @param{String} dimension
  */
